@@ -18,5 +18,9 @@ html {
 .glass {
   backdrop-filter: blur(10px); /* Blur the content behind */
   -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
-
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px black inset;
+  box-shadow: 0 0 0 1000px black inset;
+  -webkit-text-fill-color: white; /* Adjust text color if needed */
 }

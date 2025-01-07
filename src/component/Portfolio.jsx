@@ -4,7 +4,7 @@ const Portfolio = () => {
 
 
   return (
-    <div id="portfolio" className="h-screen pt-20 px-20  max-md:px-5">
+    <div id="portfolio" className="h-screen pt-20 px-20  max-md:px-5 max-sm:px-2">
       <h1 className="text-center text-4xl font-bold uppercase mb-7 ">Portfolio</h1>
      
       <section className="space-y-7">

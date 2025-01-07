@@ -61,16 +61,18 @@ const ContactMe = () => {
               </div>
 
               <div>
-                <label className="text-white font-semibold text-xs">Your Email</label>
+                <label className="text-white font-semibold text-xs"><span className="mr-1">Your Email </span>
+                   <span>  {errors.email && touched.email ? (
+                  <span className="text-red-500 text-xs mt-1"> ({errors.email})</span>
+                ) : null}</span>
+                </label>
                 <Field
                   name="email"
                   type="email"
                   placeholder="Your Email"
-                  className="w-full p-2 outline-none rounded-lg bg-transparent border-2 border-neutral-700 text-white px-4 mb-2 mt-1 hover:border-neutral-50"
+                  className={`w-full p-2 outline-none rounded-lg bg-transparent border-2 border-neutral-700 text-white px-4 mb-2 mt-1 hover:border-neutral-50 ${errors.email && touched.email ? "border-red-500" : ""}`}
                 />
-                {errors.email && touched.email ? (
-                  <div className="text-red-500 text-xs mt-1">{errors.email}</div>
-                ) : null}
+              
               </div>
 
               <div>
