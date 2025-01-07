@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  list-style-type: none;
+  background: #171717;
+  color: white;
+}
+html {
+  scroll-behavior:smooth;
+}
+.glass {
+  backdrop-filter: blur(10px); /* Blur the content behind */
+  -webkit-backdrop-filter: blur(10px); /* Safari compatibility */
+
+}
