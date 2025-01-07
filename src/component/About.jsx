@@ -15,7 +15,7 @@ const About = () => {
   ];
   return (
     <section id="about" className="h-screen flex justify-center items-center   py-10">
-      <section className="px-10">
+      <section className="px-10 max-sm:px-2">
         <article>
           <h2 className="text-center text-5xl font-bold mb-7 max-sm:mb-2 max-sm:text-3xl">ABOUT ME</h2>
           <p className="text-center text-base mb-20 max-sm:mb-10 leading-snug max-sm:text-sm">

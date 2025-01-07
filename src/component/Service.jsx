@@ -23,7 +23,7 @@ const Services = () => {
     <div id="services" className="pt-20">
           <h1 className="text-5xl font-bold text-center mb-9 ">Services</h1>
     
-    <div  className="h-[120vh] max-md:h-screen  px-28 max-md:px-4 ">
+    <div  className="h-[120vh] max-md:h-screen  px-28 max-md:px-4 max-sm:px-2">
       
       <section className="flex items-start justify-between relative max-md:justify-center">
         <div className=" flex flex-col justify-between h-[120vh] max-md:h-screen">

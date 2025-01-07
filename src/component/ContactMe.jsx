@@ -30,7 +30,7 @@ const ContactMe = () => {
   };
 
   return (
-    <div id="contact" className="h-screen pt-20 px-28 max-md:px-7">
+    <div id="contact" className="h-screen pt-20 px-28 max-md:px-7 max-sm:px-2">
       <section className="flex justify-between gap-10 items-center flex-row-reverse max-md:flex-col-reverse">
         <div className="w-1/2 text-right max-md:hidden">
           <img src="/contactme.svg" className="w-7/12 h-full mx-auto" alt="Contact" />
