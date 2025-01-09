@@ -5,15 +5,17 @@ import ContactMe from "./component/ContactMe";
 import Navbar from "./component/Navbar";
 import Portfolio from "./component/Portfolio";
 import Services from "./component/Service";
+import { SmoothScrollHero } from "./component/smoothScroll";
 export default function App() {
   return (
     <section>
-      <Navbar />
+      {/* <Navbar />
       <AboutMe />
       <About />
       <Services />
       <Portfolio />
-      <ContactMe />
+      <ContactMe /> */}
+      <SmoothScrollHero />
     </section>
   );
 }

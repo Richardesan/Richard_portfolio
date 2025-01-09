@@ -28,6 +28,7 @@ const ContactMe = () => {
     setSubmitting(false);
     resetForm();
   };
+  const inputStyle =`w-full p-2 outline-none rounded-lg bg-transparent border-2 border-neutral-700 text-white px-4 mb-2 mt-1 hover:border-neutral-50`
 
   return (
     <div id="contact" className="h-screen pt-20 px-28 max-md:px-7 max-sm:px-2">
@@ -48,16 +49,18 @@ const ContactMe = () => {
               </h1>
 
               <div>
-                <label className="text-white font-semibold text-xs">Your Name</label>
+              <label className="text-white font-semibold text-xs"><span className="mr-1">Your Name </span>
+                   <span>  {errors.name && touched.name ? (
+                  <span className="text-red-500 text-xs mt-1"> ({errors.name})</span>
+                ) : null}</span>
+                </label>
                 <Field
                   name="name"
                   type="text"
                   placeholder="Your Name"
-                  className="w-full p-2 outline-none rounded-lg bg-transparent border-2 border-neutral-700 text-white px-4 mb-2 mt-1 hover:border-neutral-50"
+                  className={`${inputStyle} ${errors.name && touched.name ? "border-red-500" : ""}`}
                 />
-                {errors.name && touched.name ? (
-                  <div className="text-red-500 text-xs mt-1">{errors.name}</div>
-                ) : null}
+      
               </div>
 
               <div>
@@ -70,23 +73,25 @@ const ContactMe = () => {
                   name="email"
                   type="email"
                   placeholder="Your Email"
-                  className={`w-full p-2 outline-none rounded-lg bg-transparent border-2 border-neutral-700 text-white px-4 mb-2 mt-1 hover:border-neutral-50 ${errors.email && touched.email ? "border-red-500" : ""}`}
+                  className={`${inputStyle} ${errors.email && touched.email ? "border-red-500" : ""}`}
                 />
               
               </div>
 
               <div>
-                <label className="text-white font-semibold text-xs">Your Message</label>
+              <label className="text-white font-semibold text-xs"><span className="mr-1">Your Message</span>
+                   <span>  {errors.message && touched.message ? (
+                  <span className="text-red-500 text-xs mt-1"> ({errors.message})</span>
+                ) : null}</span>
+                </label>
                 <Field
                   as="textarea"
                   name="message"
                   placeholder="Your Message"
-                  className="w-full p-2 outline-none rounded-lg bg-transparent border-2 border-neutral-700 text-white px-4 mt-1 hover:border-neutral-50"
+                  className={`${inputStyle} ${errors.message && touched.message ? "border-red-500" : ""}`}
                   style={{ maxWidth: "100%", resize: "none", height: "150px" }}
                 />
-                {errors.message && touched.message ? (
-                  <div className="text-red-500 text-xs mt-1">{errors.message}</div>
-                ) : null}
+
               </div>
 
               <div className="text-start">
