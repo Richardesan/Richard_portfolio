@@ -1,21 +1,17 @@
-import About from "./component/About";
-import AboutMe from "./component/AboutMe";
-import Button from "./component/Button";
-import ContactMe from "./component/ContactMe";
-import Navbar from "./component/Navbar";
-import Portfolio from "./component/Portfolio";
-import Services from "./component/Service";
+import ContactUs from "./component/ContactMe";
+import Footer from "./component/footer";
+import Hero from "./component/Hero";
+import { HoverImageLinks } from "./component/hoverImageLinks";
+import Skills from "./component/skills";
+
 import { SmoothScrollHero } from "./component/smoothScroll";
 export default function App() {
   return (
     <section>
-      {/* <Navbar />
-      <AboutMe />
-      <About />
-      <Services />
-      <Portfolio />
-      <ContactMe /> */}
+      <Hero />
       <SmoothScrollHero />
+      <Skills />
+      <Footer />
     </section>
   );
 }

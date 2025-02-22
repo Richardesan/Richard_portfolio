@@ -1,114 +1,54 @@
-import React from "react";
-import { Formik, Form, Field } from "formik";
-import * as Yup from "yup";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { FaEnvelope } from "react-icons/fa";
 
-const ContactMe = () => {
-  // Validation schema using Yup
-  const validationSchema = Yup.object({
-    name: Yup.string()
-      .min(2, "Name must be at least 2 characters")
-      .required("Name is required"),
-    email: Yup.string()
-      .email("Invalid email address")
-      .required("Email is required"),
-    message: Yup.string()
-      .min(10, "Message must be at least 10 characters")
-      .required("Message is required"),
-  });
+export default function ContactMe() {
+  const [form, setForm] = useState({ email: "" });
 
-  const initialValues = {
-    name: "",
-    email: "",
-    message: "",
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (values, { setSubmitting, resetForm }) => {
-    // Handle your form submission logic here
-    console.log(values);
-    setSubmitting(false);
-    resetForm();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", form);
   };
-  const inputStyle =`w-full p-2 outline-none rounded-lg bg-transparent border-2 border-neutral-700 text-white px-4 mb-2 mt-1 hover:border-neutral-50`
 
   return (
-    <div id="contact" className="h-screen pt-20 px-28 max-md:px-7 max-sm:px-2">
-      <section className="flex justify-between gap-10 items-center flex-row-reverse max-md:flex-col-reverse">
-        <div className="w-1/2 text-right max-md:hidden">
-          <img src="/contactme.svg" className="w-7/12 h-full mx-auto" alt="Contact" />
-        </div>
-        
-        <Formik
-          initialValues={initialValues}
-          validationSchema={validationSchema}
-          onSubmit={handleSubmit}
-        >
-          {({ errors, touched, isSubmitting }) => (
-            <Form className="rounded-lg text-black space-y-5 py-10 px-5 w-2/5 max-md:w-full">
-              <h1 className="text-3xl text-start text-white mb-3 font-bold">
-                Get in touch
-              </h1>
-
-              <div>
-              <label className="text-white font-semibold text-xs"><span className="mr-1">Your Name </span>
-                   <span>  {errors.name && touched.name ? (
-                  <span className="text-red-500 text-xs mt-1"> ({errors.name})</span>
-                ) : null}</span>
-                </label>
-                <Field
-                  name="name"
-                  type="text"
-                  placeholder="Your Name"
-                  className={`${inputStyle} ${errors.name && touched.name ? "border-red-500" : ""}`}
-                />
-      
-              </div>
-
-              <div>
-                <label className="text-white font-semibold text-xs"><span className="mr-1">Your Email </span>
-                   <span>  {errors.email && touched.email ? (
-                  <span className="text-red-500 text-xs mt-1"> ({errors.email})</span>
-                ) : null}</span>
-                </label>
-                <Field
-                  name="email"
-                  type="email"
-                  placeholder="Your Email"
-                  className={`${inputStyle} ${errors.email && touched.email ? "border-red-500" : ""}`}
-                />
-              
-              </div>
-
-              <div>
-              <label className="text-white font-semibold text-xs"><span className="mr-1">Your Message</span>
-                   <span>  {errors.message && touched.message ? (
-                  <span className="text-red-500 text-xs mt-1"> ({errors.message})</span>
-                ) : null}</span>
-                </label>
-                <Field
-                  as="textarea"
-                  name="message"
-                  placeholder="Your Message"
-                  className={`${inputStyle} ${errors.message && touched.message ? "border-red-500" : ""}`}
-                  style={{ maxWidth: "100%", resize: "none", height: "150px" }}
-                />
-
-              </div>
-
-              <div className="text-start">
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="text-black font-semibold text-sm px-8 py-2 rounded-lg hover:scale-110 active:scale-95 transition-all bg-white disabled:opacity-50 disabled:hover:scale-100"
-                >
-                  {isSubmitting ? "Sending..." : "SEND"}
-                </button>
-              </div>
-            </Form>
-          )}
-        </Formik>
-      </section>
+    <div className="min-h-screen flex items-center justify-center bg-black text-white px-4">
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="w-full max-w-lg bg-gray-900 p-6 rounded-lg shadow-lg font-mono relative"
+      >
+        <p className="text-gray-400">contact@hover.dev</p>
+        <h2 className="text-lg font-bold mt-2">Hey there! We're excited to link <FaEnvelope className="inline text-blue-400" /></h2>
+        <hr className="border-gray-600 my-3" />
+        <p className="text-gray-300">To start, could you give us <span className="text-blue-400">your email?</span></p>
+        <form onSubmit={handleSubmit} className="mt-4">
+          <label className="flex items-center space-x-2 text-green-400">
+            <span>→ ~</span>
+            <span className="text-gray-300">Enter email:</span>
+          </label>
+          <input
+            type="email"
+            name="email"
+            placeholder="example@email.com"
+            value={form.email}
+            onChange={handleChange}
+            className="w-full mt-2 bg-transparent border-b border-gray-500 text-white text-lg focus:outline-none focus:border-blue-400"
+          />
+          <motion.button
+            type="submit"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="hidden"
+          >
+            Submit
+          </motion.button>
+        </form>
+      </motion.div>
     </div>
   );
-};
-
-export default ContactMe;
+}

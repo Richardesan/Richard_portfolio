@@ -1,8 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+body {
+  background-color: black;
+}
 html {
-  scroll-behavior: auto;
+  scroll-behavior: smooth;
   overflow-x: hidden;
+}
+.rubik-spray-paint-regular {
+  font-family: "Rubik Spray Paint", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rubik-dirt-regular {
+  font-family: "Rubik Dirt", serif;
+  font-weight: 400;
+  font-style: normal;
 }

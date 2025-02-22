@@ -35,7 +35,7 @@ export const HoverImageLinks = () => {
     },
   ]
   return (
-    <section className="">
+    <section className="bg-black">
       <div className="mx-auto px-10">
        {
         porfolio_data.map((data, index)=> {
@@ -94,7 +94,7 @@ const Link = ({ heading, imgSrc, subheading, href, stack, index }) => {
       onMouseMove={handleMouseMove}
       initial="initial"
       whileHover="whileHover"
-      className={`group relative flex items-center justify-between border-b-2 border-neutral-700 py-4 transition-colors duration-500 hover:border-neutral-50 ${index % 2 !== 0 ? "ml-auto w-1/2 max-lg:w-full max-lg:ml-0" : "w-1/2 max-lg:w-full"} `}
+      className={`group relative flex items-center justify-between border-b-2 border-neutral-700 py-4 transition-colors duration-500 hover:border-neutral-50  `}
     >
       <div>
         <motion.span
