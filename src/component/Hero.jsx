@@ -7,7 +7,7 @@ const Hero = () => {
       <section className="flex items-center justify-center max-md:justify-start">
         <section className="absolute -translate-x-1/2 ml-32 max-md:relative max-md:translate-x-0 max-md:ml-0">
           <div className="flex items-end gap-x-2">
-            <h1 className="text-8xl tracking-tighter font-black rubik-dirt-regular max-md:text-6xl">
+            <h1 className="text-8xl tracking-tighter font-black rubik-dirt-regular max-md:text-6xl max-sm:text-5xl">
               Hi, I'm Bolu
             </h1>
             <div className="w-5 h-5 bg-green-500 rounded-full mb-1" />
