@@ -17,19 +17,18 @@ const Hero = () => {
               I'm a <span className="text-green-500 ">Frontend Developer </span>
             </p>
             <p className="mb-5 font-semibold text-gray-400 max-md:text-sm">
-              I've spent the last 5 years building and scaling software for some
-              pretty cool companies. It's been a rewarding journey, tackling complex challenges and driving impactful solution. Let's connect!
+              I’ve spent the last 2 years crafting and scaling frontend
+              experiences for some awesome teams. It’s been a rewarding
+              journey—solving UI challenges, optimizing performance, and
+              building user-friendly interfaces. Let’s connect!
             </p>
             <a href="#contactme">
-            <Button />
-
+              <Button />
             </a>
-            
           </div>
         </section>
         <div className="absolute translate-x-1/2 mr-20 max-md:hidden">
-        <DotGrid />
-
+          <DotGrid />
         </div>
       </section>
     </div>
