@@ -8,13 +8,13 @@ const Hero = () => {
         <section className="absolute -translate-x-1/2 ml-32 max-md:relative max-md:translate-x-0 max-md:ml-0">
           <div className="flex items-end gap-x-2">
             <h1 className="text-8xl tracking-tighter font-black rubik-dirt-regular max-md:text-6xl max-sm:text-5xl">
-              Hi, I'm Bolu
+              Hi, I'm Esan
             </h1>
             <div className="w-5 h-5 bg-green-500 rounded-full mb-1" />
           </div>
           <div className="w-[36vw] max-md:w-full ">
             <p className="text-gray-400 font-bold text-4xl my-4 max-md:text-2xl">
-              I'm a <span className="text-green-500 ">Backend Developer </span>
+              I'm a <span className="text-green-500 ">Frontend Developer </span>
             </p>
             <p className="mb-5 font-semibold text-gray-400 max-md:text-sm">
               I've spent the last 5 years building and scaling software for some

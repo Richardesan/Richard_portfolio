@@ -9,25 +9,25 @@ const Skill = () => {
     {
       name: "linkedin",
       icon: <FaLinkedin />,
-      link: "https://www.linkedin.com/in/azeez-ariyo-374629155"
+      link: "https://www.linkedin.com/in/richard-esan-4919a4243?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
       name: "github",
       icon: <FaGithub />,
-      link: "https://github.com/Boltnet14"
+      link: "https://github.com/Richardesan",
     },
     {
       name: "twitter/X",
       icon: <FaXTwitter />,
-      link: "https://x.com/home"
+      link: "https://x.com/RichardEsan2",
     },
     {
       name: "email",
       icon: <HiOutlineMailOpen />,
-      link: "ariyobolt@gmail.com"
+      link: "mailto:esanrichard2@gmail.com",
     },
   ];
-console.log(socials)
+  console.log(socials);
   return (
     <section className="">
       <article className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center  gap-8 max-w-6xl mx-auto text-white ">
@@ -39,12 +39,12 @@ console.log(socials)
             <div className="w-4 h-4 bg-green-500 rounded-full mb-1" />
           </div>{" "}
           <p className="font-semibold text-gray-400">
-            These are the tools I wielded on my backend journey—writing
-            efficient code, building and scaling APIs, optimizing databases for
-            lightning-fast queries, securing authentication and user data,
-            orchestrating servers and containers, automating deployments, and
-            ensuring everything runs smoothly behind the scenes while the world
-            enjoys seamless digital experiences! 🚀🔥
+            These are the tools I wielded on my frontend journey—crafting clean,
+            efficient code, building responsive and dynamic user interfaces,
+            optimizing performance for lightning-fast loads, managing state
+            seamlessly, securing user interactions, integrating with APIs
+            effortlessly, and ensuring everything looks and feels smooth while
+            users enjoy stunning digital experiences! 🎨⚡
           </p>
         </div>
         <ShuffleGrid />
@@ -55,21 +55,25 @@ console.log(socials)
           goals.
         </p> */}
         {/* <p className="text-gray-400 text-lg font-bold rubik-dirt-regular">Connect with me.</p> */}
-   <div className="flex justify-center items-center gap-x-4">
-
-
-        {socials.map((data, index) => {
-  return (
-    <a key={index} href={`${data.link}`} >
-    <div  className="flex items-end gap-1 justify-center group cursor-pointer duration-300" id="contactme">
-      <p className="text-2xl text-gray-400 group-hover:text-green-500 duration-300 cursor-pointer ">{data.icon}</p>
-      <p className="text-gray-400 text-xs font-bold group-hover:text-gray-200 duration-300 capitalize">{data.name}</p>
-    </div>
-    </a>
-  );
-})}
-   </div>
-        
+        <div className="flex justify-center items-center gap-x-4">
+          {socials.map((data, index) => {
+            return (
+              <a key={index} href={`${data.link} `} target="blank">
+                <div
+                  className="flex items-end gap-1 justify-center group cursor-pointer duration-300"
+                  id="contactme"
+                >
+                  <p className="text-2xl text-gray-400 group-hover:text-green-500 duration-300 cursor-pointer ">
+                    {data.icon}
+                  </p>
+                  <p className="text-gray-400 text-xs font-bold group-hover:text-gray-200 duration-300 capitalize">
+                    {data.name}
+                  </p>
+                </div>
+              </a>
+            );
+          })}
+        </div>
       </article>
     </section>
   );

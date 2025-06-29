@@ -36,7 +36,7 @@ const Nav = () => {
         
         className="flex items-center gap-1 text-xs text-zinc-400"
       >
-        <a href="https://github.com/Boltnet14">
+        <a href="https://github.com/Richardesan">
         <FaGithub className="text-3xl hover:text-green-500 transition-all"/>  
         </a>
     </button>
@@ -105,29 +105,29 @@ const ParallaxImages = () => {
   return (
     <div className="mx-auto max-w-5xl px-4 pt-[200px]">
       <ParallaxImg
-        src="/2.jpg"
+        src="/service4.svg"
         alt="And example of a space launch"
         start={-200}
         end={200}
         className="w-1/3"
       />
       <ParallaxImg
-        src="/2.jpg"
+        src="/service.svg"
         alt="An example of a space launch"
         start={200}
         end={-250}
         className="mx-auto w-2/3"
       />
       <ParallaxImg
-        src="4.jpg"
-        alt="Orbiting satellite"
+        src="/service5.svg"
+        alt="services"
         start={-200}
         end={200}
         className="ml-auto w-1/3"
       />
       <ParallaxImg
-        src="/4.jpg"
-        alt="Orbiting satellite"
+        src="/service3.svg"
+        alt="services"
         start={0}
         end={-500}
         className="ml-24 w-5/12"
@@ -175,17 +175,17 @@ const Schedule = () => {
       >
         My Projects
       </motion.h1>
-      <ScheduleItem title="E-commerce web api" date="Developed APIs for product catalog, cart management and order processing" tools="node.js, express" />
-      <ScheduleItem title="E-commerce web api" date="Developed APIs for product catalog, cart management and order processing" tools="node.js, express" />
-      <ScheduleItem title="E-commerce web api" date="Developed APIs for product catalog, cart management and order processing" tools="node.js, express"  />
-      <ScheduleItem title="E-commerce web api" date="Developed APIs for product catalog, cart management and order processing" tools="node.js, express" />
-      <ScheduleItem title="E-commerce web api" date="Developed APIs for product catalog, cart management and order processing" tools="node.js, express" />
+      <ScheduleItem title="The Chills Room" date="The Chills Room is a vibrant, inclusive hub for creators, gamers, and crypto lovers" tools="react.js, tailwind, framer-motion" link="https://mychills-update.vercel.app/" />
+      <ScheduleItem title="Pacetopper" date="Pacetopper is a technology services for banks, fintechs, and mobile networks" tools="next.js" link={"https://new.pacetopper.com/"}/>
+      <ScheduleItem title="Acces" date="Acees is a fashion e-commerce site that provides you with an effortless and enjoyable shopping experience." tools="React.js,framer-motion, tailwind" link={"https://github.com/Pr3c10us/Ecommerce"}  />
+      <ScheduleItem title="GoZapper" date="Developed APIs for product catalog, cart management and order processing" tools="typescript, tailwind" link={"https://github.com/Pr3c10us/GoZapper-Client"}/>
+      <ScheduleItem title="Leashtash" date="Developed APIs for product catalog, cart management and order processing" tools="react.js, tailwind, framer-motion" />
       
     </section>
   );
 };
 
-const ScheduleItem = ({ title, date, tools, location }) => {
+const ScheduleItem = ({ title, date, tools, location, link }) => {
   return (
     <motion.div
       initial={{ y: 48, opacity: 0 }}
@@ -193,11 +193,13 @@ const ScheduleItem = ({ title, date, tools, location }) => {
       transition={{ ease: "easeInOut", duration: 0.75 }}
       className="mb-9 flex items-center justify-between border-b border-zinc-800 px-3 pb-9 cursor-pointer group"
     >
+      <a href={link} target="blank">
       <div>
         <p className="mb-1.5 text-xl text-zinc-50">{title}</p>
         <p className="text-sm uppercase text-zinc-500">{date}</p>
         <p className="text-xs uppercase text-zinc-500">{tools}</p>
       </div>
+      </a>
       <div className="flex items-center gap-1.5 text-end text-sm uppercase text-zinc-500">
         <p>{location}</p>
         <FaArrowRight className="group-hover:text-white duration-200"/>      </div>
