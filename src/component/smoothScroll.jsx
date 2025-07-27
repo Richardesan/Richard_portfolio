@@ -34,7 +34,7 @@ const Nav = () => {
     <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between p-6 text-white">
 <p></p>     <a href="/Richard_Esan_Resume.pdf" download>
   <button
-    className="capitalize relative overflow-hidden text-sm border-[1px] border-neutral-500 bg-neutral-800 px-4 py-2 font-mono font-medium text-neutral-300 transition-colors hover:text-green-500"
+    className="capitalize relative overflow-hidden text-sm max-sm:text-xs border-[1px] border-neutral-500 bg-neutral-800 px-4 py-2 font-mono font-medium text-neutral-300 transition-colors hover:text-green-500"
   >
     My Resume
   </button>
