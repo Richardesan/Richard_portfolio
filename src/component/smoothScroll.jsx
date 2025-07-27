@@ -31,15 +31,15 @@ export const SmoothScrollHero = () => {
 
 const Nav = () => {
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between px-6 py-3 text-white">
-<p></p>      <button
-        
-        className="flex items-center gap-1 text-xs text-zinc-400"
-      >
-        <a href="https://github.com/Richardesan">
-        <FaGithub className="text-3xl hover:text-green-500 transition-all"/>  
-        </a>
-    </button>
+    <nav className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between p-6 text-white">
+<p></p>     <a href="/Richard_Esan_Resume.pdf" download>
+  <button
+    className="capitalize relative overflow-hidden text-sm border-[1px] border-neutral-500 bg-neutral-800 px-4 py-2 font-mono font-medium text-neutral-300 transition-colors hover:text-green-500"
+  >
+    My Resume
+  </button>
+</a>
+
     </nav>
   );
 };
@@ -104,7 +104,7 @@ const CenterImage = () => {
 const ParallaxImages = () => {
   return (
     <div className="mx-auto max-w-5xl px-4 pt-[200px]">
-      <ParallaxImg
+      {/* <ParallaxImg
         src="/service4.svg"
         alt="And example of a space launch"
         start={-200}
@@ -131,7 +131,7 @@ const ParallaxImages = () => {
         start={0}
         end={-500}
         className="ml-24 w-5/12"
-      />
+      /> */}
     </div>
   );
 };
@@ -175,8 +175,9 @@ const Schedule = () => {
       >
         My Projects
       </motion.h1>
-      <ScheduleItem title="The Chills Room" date="The Chills Room is a vibrant, inclusive hub for creators, gamers, and crypto lovers" tools="react.js, tailwind, framer-motion" link="https://mychills-update.vercel.app/" />
       <ScheduleItem title="Pacetopper" date="Pacetopper is a technology services for banks, fintechs, and mobile networks" tools="next.js" link={"https://new.pacetopper.com/"}/>
+      <ScheduleItem title="The Chills Room" date="The Chills Room is a vibrant, inclusive hub for creators, gamers, and crypto lovers" tools="react.js, tailwind, framer-motion" link="https://mychills-update.vercel.app/" />
+      <ScheduleItem title="Upstate" date="Licensed and trusted, Upstate Electrical Systems LLC delivers safe, high-quality solutions for homes across Chesnee and surrounding areas." tools="react.js, tailwind, framer-motion" link="https://upstate-one.vercel.app/" />
       <ScheduleItem title="Acces" date="Acees is a fashion e-commerce site that provides you with an effortless and enjoyable shopping experience." tools="React.js,framer-motion, tailwind" link={"https://github.com/Pr3c10us/Ecommerce"}  />
       <ScheduleItem title="GoZapper" date="Developed APIs for product catalog, cart management and order processing" tools="typescript, tailwind" link={"https://github.com/Pr3c10us/GoZapper-Client"}/>
       <ScheduleItem title="Leashtash" date="Developed APIs for product catalog, cart management and order processing" tools="react.js, tailwind, framer-motion" />

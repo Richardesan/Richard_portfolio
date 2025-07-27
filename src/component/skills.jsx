@@ -27,7 +27,7 @@ const Skill = () => {
       link: "mailto:esanrichard2@gmail.com",
     },
   ];
-  console.log(socials);
+  // console.log(socials);
   return (
     <section className="">
       <article className="w-full px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center  gap-8 max-w-6xl mx-auto text-white ">
